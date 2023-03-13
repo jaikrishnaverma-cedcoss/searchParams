@@ -1,0 +1,169 @@
+main {
+    background-color: #e5eff1;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.loading__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.sidebar {
+    min-height: 100vh;
+    background-color: #0E8388;
+    position: fixed;
+    overflow-x: hidden;
+    border: 2px solid grey;
+    border-radius: 0px 20px;
+    padding: 10px;
+    max-width: 60% !important;
+    min-width: 82px;
+    z-index: 30000000;
+}
+
+.aside__top {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.toggler {
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 10px;
+    background-color: #2C3333;
+    color: white;
+}
+
+.toggler:hover {
+    background-color: aliceblue;
+    color: rgb(131, 125, 219);
+}
+
+.hide {
+    display: none !important;
+}
+
+.aside__searchbox {
+    /* border: 2px solid aliceblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    padding: 5px;
+    margin: 15px 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.searchbox__inputbox {
+    width: 72%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    min-height: 35px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.searchbox__button {
+    width: 15%;
+    border-radius: 5px;
+    min-height: 38px;
+    font-size: 20px;
+    min-width: 38px;
+    background-color: transparent;
+    padding: 10px;
+    color: rgb(131, 125, 219);
+    ;
+    border: none;
+}
+
+.sidebar--active {
+    animation-name: expand;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    width: 300px;
+}
+
+.wrapper {
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+li {
+    list-style: none;
+}
+
+.sidebar__link {
+
+    margin-bottom: 15px;
+}
+
+.sidebar__link a {
+    color: white;
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+    text-decoration: none;
+}
+.sidebar__link a.active{
+    color: #ffa900;
+}
+.sidebar__link a:hover{
+color: aqua !important;
+}
+.sidebar__link a i {
+    margin: 0px 20px;
+    font-size: 25px;
+}
+
+ul.links {
+    padding-inline-start: 0px;
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+@keyframes expand {
+    from {
+        width: 60px;
+    }
+
+    to {
+        width: 300px;
+    }
+}
+
+.sidebar--close {
+    width: 60px;
+    border-radius: 0px 5px;
+    animation-name: shrink;
+    animation-duration: .4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes shrink {
+    from {
+        width: 300px;
+    }
+
+    to {
+        width: 60px;
+    }
+}
+
+.addtocart:hover{
+background-color: #e5eff1;
+color: black;
+    }
