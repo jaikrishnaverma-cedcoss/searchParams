@@ -13,7 +13,7 @@ const Settings = () => {
     let y = {};
     Object.entries(form).forEach((x) => {
       if (x[1]["name"] !== undefined && x[1]["name"]) {
-        y[x[1]["name"]] = 8;
+        y[x[1]["name"]] = x[1]["value"];
       }
     });
     return y;
