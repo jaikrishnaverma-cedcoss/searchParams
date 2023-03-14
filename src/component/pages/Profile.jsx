@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router';
 import Authenticate from '../customHook/Authenticate';
+import { useWrappedContext } from '../customHook/useMyContext';
 import { MyContext } from '../myContext';
 
 const Profile = (props) => {
-  const {state,setState} = useContext(MyContext)
+  const {state,setState} = useWrappedContext(MyContext)
   const navigate=useNavigate()
   Authenticate()
   return (

@@ -1,10 +1,11 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useWrappedContext } from "../customHook/useMyContext";
 import { MyContext } from "../myContext";
 
 const Signup= () => {
   //get all dataset from redux which is datahubType
-  const {state,setState} = useContext(MyContext)
+  const {state,setState} = useWrappedContext(MyContext)
   // useRef for displaying error message ex: wrong password
   const msg = useRef(null);
   // this hook for navigate through router

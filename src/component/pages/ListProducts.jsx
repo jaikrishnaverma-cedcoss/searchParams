@@ -1,11 +1,12 @@
 
 
-import React, { useContext } from "react";
+import React from "react";
+import { useWrappedContext } from "../customHook/useMyContext";
 import { MyContext } from "../myContext";
 // Cart details showing
 const ListProducts = () => {
       // store users details
-  const {state,setState} = useContext(MyContext)
+  const {state,setState} = useWrappedContext(MyContext)
   let table=state.users
   // delete list row
   const deleteThis = (i) => {

@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import useIndexKey from "../customHook/useIndexKey";
+import { useWrappedContext } from "../customHook/useMyContext";
 import { MyContext } from "../myContext";
 
 const FilterProducts = (props) => {
   const { data, loading, error } = props
   // store users details
-  const { state, setState } = useContext(MyContext);
+  const { state, setState } = useWrappedContext(MyContext);
 
   const getIndex = useIndexKey();
 

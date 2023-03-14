@@ -1,16 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, {  useState } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { navlinks } from "./controllerData";
+import { useWrappedContext } from "./customHook/useMyContext";
 import { MyContext } from "./myContext";
 import "./styles/Sidebar.css";
 const Sidebar = (props) => {
   // useLocation to get current path
   const location = useLocation();
-
   // sidebar toggler
   const [toggle, setToggle] = useState(false);
   // store users details
-  const { state } = useContext(MyContext);
+  const { state } = useWrappedContext(MyContext);
 
   return (
     <>
@@ -67,9 +67,6 @@ const Sidebar = (props) => {
             </div>
           ) : (
             <div className="col-12">
-              <div className="bg-light col-12 d-flex align-items-center justify-content-end">
-           
-              </div>
               <div className="col-12 px-md-5">
                 <p className="text-secondary fw-normal ms-3 mt-3">
                   {location.pathname}
